@@ -1,17 +1,17 @@
-package ch2_2;
+package ch2.option2;
 
-/**
- * Created by kenta_nakajima on 2017/09/09.
- */
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.ThreadFactory;
 
+/**
+ * Created by kenta_nakajima on 2017/09/09.
+ */
 
 class Log {
     public static void println(String s) {
-        System.out.println(Thread.currentThread().getName() + ": " + s);
+        System.out.println(Thread.currentThread().getName() + " : " + s);
     }
 }
 
@@ -55,7 +55,7 @@ class UserThread extends Thread {
         try {
             while(true) {
                 resource.use();
-                Thread.sleep(random.nextInt(3000));
+                Thread.sleep(random.nextInt(300));
             }
         } catch (InterruptedException e) {}
     }
@@ -65,8 +65,8 @@ public class Main {
     public static void main(String[] args) {
         BoundedResource resource = new BoundedResource(3);
 
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             new UserThread(resource).start();
         }
-     }
+    }
 }

@@ -1,4 +1,4 @@
-package ch1;
+package Intro01;
 
 /**
  * Created by kenta_nakajima on 2017/09/09.
