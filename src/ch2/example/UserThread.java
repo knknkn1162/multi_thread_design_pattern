@@ -1,4 +1,4 @@
-package ch2.ex;
+package ch2.example;
 
 /**
  * Created by kenta_nakajima on 2017/09/09.
