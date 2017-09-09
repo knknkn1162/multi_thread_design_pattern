@@ -1,9 +1,8 @@
-package ch2.option2;
+package ch1.option2;
 
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.ThreadFactory;
 
 /**
  * Created by kenta_nakajima on 2017/09/09.
