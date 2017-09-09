@@ -12,8 +12,9 @@ public class Main {
                 {"Bobby", "Brazil"},
                 {"Chris", "Canada"},
         };
+        int count = 1000000;
         for (String[] s: info) {
-            new UserThread(gate, s[0], s[1]).start();
+            new UserThread(gate, s[0], s[1], count).start();
         }
     }
 }
