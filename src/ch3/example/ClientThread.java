@@ -26,7 +26,7 @@ public class ClientThread extends Thread {
             requestQueue.putRequest(request);
 
             try {
-                Thread.sleep(random.nextInt(100));
+                Thread.sleep(random.nextInt(1000));
 
             } catch (InterruptedException e) {}
         }

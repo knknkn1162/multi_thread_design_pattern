@@ -4,6 +4,7 @@ package ch3.example;
  * Created by kenta_nakajima on 2017/09/10.
  */
 
+
 import java.util.Queue;
 import java.util.LinkedList;
 
@@ -22,8 +23,9 @@ public class RequestQueue {
     }
 
     private Request proc() {
-        // do sth;
-        return queue.remove();
+        Request q =  queue.remove();
+        //do sth;
+        return q;
     }
 
 
