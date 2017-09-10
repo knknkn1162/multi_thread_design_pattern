@@ -15,6 +15,7 @@ public class RequestQueue {
         while (queue.peek() == null) { // guard suspension
             try {
                 wait();
+                System.out.println("exit wait");
             } catch (InterruptedException e) {
             }
         }
