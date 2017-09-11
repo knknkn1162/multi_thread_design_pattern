@@ -43,7 +43,7 @@ public class Data {
         }
     }
 
-    public char[] write(char c) throws InterruptedException {
+    public void write(char c) throws InterruptedException {
         lock.writeLock();
         try {
             doWrite(c);
