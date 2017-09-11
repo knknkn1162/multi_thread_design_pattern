@@ -20,10 +20,8 @@ public class WriterThread extends Thread {
 
     private char nextChar() {
         char c = filter.charAt(index);
-        index++;
-        if (index >= filter.length()) {
-            index = 0;
-        }
+        this.index = (index+1)%filter.length();
+
         return c;
     }
 
@@ -32,6 +30,7 @@ public class WriterThread extends Thread {
             while(true) {
                 char c = nextChar();
                 data.write(c);
+                System.out.println(Thread.currentThread().getName() + " writes " + c);
                 Thread.sleep(random.nextInt(3000));
             }
         } catch (InterruptedException e) {}

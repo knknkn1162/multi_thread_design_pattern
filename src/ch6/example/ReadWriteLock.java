@@ -28,6 +28,8 @@ public class ReadWriteLock {
 
     public synchronized void writeLock() throws InterruptedException {
         waitingWriters++;
+
+        System.out.println("<wait start> writingWriters : " + writingWriters);
         try {
             while (readingReaders > 0 || writingWriters > 0) {
                 wait();
@@ -35,6 +37,7 @@ public class ReadWriteLock {
         } finally {
             waitingWriters--;
         }
+        System.out.println("<wait end> writingWriters : " + writingWriters);
         writingWriters++;
     }
 

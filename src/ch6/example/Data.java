@@ -30,8 +30,9 @@ public class Data {
     private void doWrite(char c) {
         for(int i = 0; i < buffer.length; i++) {
             buffer[i] = c;
+            slowly();
         }
-        slowly();
+
     }
 
     public char[] read() throws InterruptedException {
