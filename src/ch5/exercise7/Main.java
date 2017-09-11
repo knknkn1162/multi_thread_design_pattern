@@ -1,0 +1,29 @@
+package ch5.exercise7;
+
+import org.omg.CORBA.INTERNAL;
+
+/**
+ * Created by kenta_nakajima on 2017/09/11.
+ */
+public class Main {
+    public static void main(String[] args) {
+        Thread executor = new Thread() {
+            public void run() {
+                System.out.println("Host.execute BEGIN");
+                try {
+                    Host.execute(100);
+                } catch (InterruptedException e) {e.printStackTrace();}
+                System.out.println("Host.execute END");
+            }
+        };
+
+        executor.start();
+
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {}
+        System.out.println("Interrupt");
+        executor.interrupt();
+        
+    }
+}
