@@ -19,6 +19,7 @@ public class Table extends ArrayBlockingQueue<String>{
     public String take() throws InterruptedException {
         String cake = super.take();
         System.out.println(Thread.currentThread().getName() + " takes " + cake);
+        return cake;
     }
 
 }
