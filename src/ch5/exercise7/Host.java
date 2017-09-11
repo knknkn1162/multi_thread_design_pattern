@@ -7,6 +7,7 @@ public class Host {
     public static void execute(int count) throws InterruptedException {
         for(int i = 0; i < count; i++) {
             if (Thread.interrupted()) {
+                System.out.println("thread.interrupted");
                 throw new InterruptedException();
             }
             doHeavyJob();
