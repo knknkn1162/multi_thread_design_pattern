@@ -19,13 +19,12 @@ public class ConsumerThread extends Thread {
         this.random = new Random(seed);
     }
 
-
     public void run() {
         try {
             while(true) {
-                System.out.println(Thread.currentThread().getName() + ": before exchange");
+                //System.out.println(Thread.currentThread().getName() + ": before exchange");
                 buffer = exchanger.exchange(buffer);
-                System.out.println(Thread.currentThread().getName() + ": after exchange");
+                //System.out.println(Thread.currentThread().getName() + ": after exchange");
 
                 for(int i = 0; i < buffer.length; i++) {
                     System.out.println(Thread.currentThread().getName() + ": => " + buffer[i]);

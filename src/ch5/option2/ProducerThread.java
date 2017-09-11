@@ -27,9 +27,9 @@ public class ProducerThread extends Thread {
                     buffer[i] = nextChar();
                     System.out.println(Thread.currentThread().getName() + " : " + buffer[i]);
                 }
-                System.out.println(Thread.currentThread().getName() + " :before exchange");
+                //System.out.println(Thread.currentThread().getName() + " :before exchange");
                 buffer = exchanger.exchange(buffer);
-                System.out.println(Thread.currentThread().getName() + " :after exchange");
+                //System.out.println(Thread.currentThread().getName() + " :after exchange");
             }
         } catch (InterruptedException e) {}
     }
