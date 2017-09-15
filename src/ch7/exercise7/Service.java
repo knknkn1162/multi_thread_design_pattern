@@ -34,7 +34,11 @@ public class Service {
             try {
                 Thread.sleep(1000);
 
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+
+            } finally {
+                clientSocket.close();
+            }
         }
         out.writeBytes("</body></html>");
 

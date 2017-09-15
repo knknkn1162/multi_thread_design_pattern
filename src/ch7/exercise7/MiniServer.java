@@ -19,24 +19,10 @@ public class MiniServer {
         ServerSocket serverSocket = new ServerSocket(portnumber);
         System.out.println("Listening on " + serverSocket);
 
-        try {
-            while(true) {
-                System.out.println("Accepting...");
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("Connected to " + clientSocket);
-
-                try {
-                    Service.service(clientSocket);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    clientSocket.close();
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            serverSocket.close();
+        while(true) {
+            System.out.println("Accepting...");
+            Socket clientSocket = serverSocket.accept();
+            new ClientThread(clientSocket).run();
         }
     }
 }
