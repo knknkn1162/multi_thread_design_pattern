@@ -1,4 +1,4 @@
-package ch7;
+package ch7.example;
 
 /**
  * Created by kenta_nakajima on 2017/09/15.
