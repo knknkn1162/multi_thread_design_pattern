@@ -1,4 +1,4 @@
-package ch8;
+package ch8.example;
 
 /**
  * Created by knknkn on 2017/09/16.
