@@ -1,5 +1,7 @@
 package ch9.exercise4;
 
+import java.util.concurrent.ExecutionException;
+
 /**
  * Created by knknkn on 2017/09/16.
  */
@@ -17,10 +19,14 @@ public class Main {
             Thread.sleep(200);
         } catch (InterruptedException e) {}
         System.out.println("main otherJob end");
-        System.out.println(data4.getContent());
-        System.out.println("data1 = " + data1.getContent());
-        System.out.println("data2 = " + data2.getContent());
-        System.out.println("data3 = " + data3.getContent());
+        try {
+            System.out.println(data4.getContent());
+            System.out.println("data1 = " + data1.getContent());
+            System.out.println("data2 = " + data2.getContent());
+            System.out.println("data3 = " + data3.getContent());
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("main END");
     }

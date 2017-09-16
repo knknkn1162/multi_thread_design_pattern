@@ -15,7 +15,7 @@ public class Host {
                     RealData realData = new RealData(count, ch);
                     future.setRealdata(realData);
                 } catch (Exception e) {
-
+                    future.setException(e);
                 }
             }
         }.start();
