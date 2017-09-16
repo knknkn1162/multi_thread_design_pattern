@@ -15,6 +15,7 @@ public class ClientThread extends Thread {
         this.channel = channel;
     }
 
+    // invoke
     public void run() {
         try {
             for(int i =0; true; i++) {
