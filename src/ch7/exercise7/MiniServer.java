@@ -18,11 +18,11 @@ public class MiniServer {
     public void execute() throws IOException {
         ServerSocket serverSocket = new ServerSocket(portnumber);
         System.out.println("Listening on " + serverSocket);
-
+        System.out.println("Accepting...");
         while(true) {
-            System.out.println("Accepting...");
             Socket clientSocket = serverSocket.accept();
-            new ClientThread(clientSocket).run();
+            System.out.println("Accept in " + clientSocket);
+            new ClientThread(clientSocket).start();
         }
     }
 }
