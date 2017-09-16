@@ -1,4 +1,4 @@
-package ch7.exercise7;
+package ch7.exercise6;
 
 import java.io.IOException;
 

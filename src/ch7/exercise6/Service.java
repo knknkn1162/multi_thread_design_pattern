@@ -1,4 +1,4 @@
-package ch7.exercise7;
+package ch7.exercise6;
 
 /**
  * Created by kenta_nakajima on 2017/09/15.
@@ -7,8 +7,6 @@ package ch7.exercise7;
 
 import java.net.Socket;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
 import java.io.DataOutputStream;
 
 public class Service {
