@@ -1,4 +1,4 @@
-package ch9.hint;
+package ch10.hint;
 
 /**
  * Created by knknkn on 2017/09/19.
