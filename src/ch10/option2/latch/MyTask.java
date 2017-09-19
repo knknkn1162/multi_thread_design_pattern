@@ -1,4 +1,4 @@
-package ch10.option2;
+package ch10.option2.latch;
 
 /**
  * Created by knknkn on 2017/09/19.

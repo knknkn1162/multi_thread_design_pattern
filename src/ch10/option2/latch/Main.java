@@ -1,10 +1,8 @@
-package ch10.option2;
+package ch10.option2.latch;
 
 /**
  * Created by knknkn on 2017/09/19.
  */
-
-import ch3.exercise5.TalkThread;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
